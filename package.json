@@ -1,0 +1,29 @@
+{
+  "name": "connect-cloudant",
+  "description": "Clodant session store for Connect, updated for Couchnode 2.0.x",
+  "version": "1.0.0",
+  "author": "Dastagiri Komali<dastagiri.komali@ixonos.com>",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:komalda/connect-cloudant.git"
+  },
+  "dependencies": {
+    "cloudant": "^1.4.1",
+    "debug": "^2.2.0",
+    "underscore": "^1.8.3",
+    "util": "^0.10.3"
+  },
+  "devDependencies": {
+    "express-session": "^1.13.0"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "bugs": {
+    "url": "https://github.com/komalda/connect-cloudant/issues"
+  },
+  "scripts": {
+    "test": "node test.js"
+  }
+}
