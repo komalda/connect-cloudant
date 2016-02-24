@@ -1,17 +1,15 @@
-<<<<<<< HEAD
 # Connect-Cloudant
 =======
 
-Connect-cloudant
 
-NodeJS Session Store for Cloudant backed applications.
+# NodeJS Session Store for Cloudant backed applications.
 
-# npm install connect-cloudant
+`npm install connect-cloudant`
 
-This is based on connect-couchbase, found at https://github.com/christophermina/connect-couchbase.
-
+This is based on `connect-couchbase`, found at https://github.com/christophermina/connect-couchbase.
 
 You can use like below, when setting up your Express 4.x app:
+-----
 
 var session = require('express-session');
 var CloudantStore = require('connect-cloudant')(session);
