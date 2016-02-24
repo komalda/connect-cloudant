@@ -1,4 +1,6 @@
-connect-cloudant
+
+Connect-cloudant
+
 NodeJS Session Store for Cloudant backed applications.
 
 npm install connect-cloudant
