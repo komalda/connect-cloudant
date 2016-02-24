@@ -11,7 +11,7 @@ This is based on `connect-couchbase`, found at https://github.com/christophermin
 You can use like below, when setting up your Express 4.x app:
 -----
 
-
+```
 var session = require('express-session');
 var CloudantStore = require('connect-cloudant')(session);
 var cloudantStore = new CloudantStore({
@@ -21,7 +21,7 @@ var cloudantStore = new CloudantStore({
      prefix: 'sess',             //optional
      operationTimeout:2000,      //optional
      connectionTimeout:2000,      //optional
-});`
+});```
 
 
 
