@@ -21,7 +21,7 @@ var cloudantStore = new CloudantStore({
      prefix: 'sess',             //optional
      operationTimeout:2000,      //optional
      connectionTimeout:2000,      //optional
-});```
+});
 
 
 
@@ -40,4 +40,5 @@ app.use(session({
     cookie: {maxAge:24*60*60*1000} //stay open for 1 day of inactivity
 }));
 
+```
 Please file any bugs at https://github.com/komalda/connect-cloudant/issues
