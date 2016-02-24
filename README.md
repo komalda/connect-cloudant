@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Connect-Cloudant
+=======
+
+Connect-cloudant
 
 NodeJS Session Store for Cloudant backed applications.
 
