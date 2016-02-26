@@ -6,10 +6,12 @@ var assert = require('assert')
     , session = require('express-session')
     , CloudantStore = require('./')(session)
     , util = require("util")
-    , debug = require("debug");
+    , debug = require("debug")("cloudant:test");
 
 //change the url
-var store = new CloudantStore({url: "https://@Username:@Password@Username-bluemix.cloudant.com",
+//var store = new CloudantStore({url: "https://@Username:@Password@Username-bluemix.cloudant.com",
+//  databaseName:"sessions"});
+var store = new CloudantStore({url: "https://6970644b-4d87-43e2-9c77-4aaf9692fd13-bluemix:eb106779abcd3083bcc6bc234ba6183aff37eecae6a207c9e867ac9bcb79c0a4@6970644b-4d87-43e2-9c77-4aaf9692fd13-bluemix.cloudant.com",
   databaseName:"sessions"});
 
 store.on('connect', function(){
@@ -32,19 +34,21 @@ store.on('connect', function(){
             // #set null
             store.set('123', testJson, function(err){
                 if (err) {
-                    console.log("AN ERROR OCCURRED SETTING SESSION: " + err);
+                    debug("##AN ERROR OCCURRED SETTING SESSION: " + err);
+                }else{
+                    debug("Updated session OK")
                 }
-
+                assert.ok(!err, "#set() got an err");
                 store.destroy('123', function(err){
                     if (err) {
-                        console.log("AN ERROR OCCURRED DESTROYING SESSION: " + err);
+                        debug("AN ERROR OCCURRED DESTROYING SESSION: " + err);
                     }
-
-                    console.log('done');
+                    assert.ok(!err, "#destroy() got an err");
+                    debug('### done');
                     process.exit(0);
                 });
             });
-            throw new Error('Error in fn');
+
         });
     });
 });
