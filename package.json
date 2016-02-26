@@ -1,6 +1,6 @@
 {
   "name": "connect-cloudant",
-  "description": "Clodant session store for Connect, updated for Couchnode 2.0.x",
+  "description": "Clodant session store for Connect",
   "version": "1.0.1",
   "author": "Dastagiri Komali<dastagiri.komali@ixonos.com>",
   "main": "./index.js",
