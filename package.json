@@ -24,6 +24,6 @@
     "url": "https://github.com/komalda/connect-cloudant/issues"
   },
   "scripts": {
-    "test": "node test.js"
+    "test": "node cloudant-test.js"
   }
 }
