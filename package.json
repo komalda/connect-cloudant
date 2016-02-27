@@ -1,7 +1,7 @@
 {
   "name": "connect-cloudant",
   "description": "Clodant session store for Connect",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Dastagiri Komali<dastagiri.komali@ixonos.com>",
   "main": "./index.js",
   "repository": {
@@ -11,6 +11,7 @@
   "dependencies": {
     "cloudant": "^1.4.1",
     "debug": "^2.2.0",
+    "promise": "^7.1.1",
     "underscore": "^1.8.3",
     "util": "^0.10.3"
   },
