@@ -1,8 +1,8 @@
 {
   "name": "connect-cloudant",
   "description": "Clodant session store for Connect",
-  "version": "1.0.3",
-  "author": "Dastagiri Komali<dastagiri.komali@ixonos.com>",
+  "version": "1.0.4",
+  "author": "Ixonos Plc.",
   "main": "./index.js",
   "repository": {
     "type": "git",
