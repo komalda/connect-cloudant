@@ -1,7 +1,7 @@
 {
   "name": "connect-cloudant",
   "description": "Clodant session store for Connect",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Ixonos Plc.",
   "main": "./index.js",
   "repository": {
