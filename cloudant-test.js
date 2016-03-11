@@ -17,7 +17,7 @@ store.on('connect', function(){
 
     var testJson = { cookie: { maxAge: 2000 }, name: 'cm' };
     // #set()
-    store.set('123', testJson, function(err, ok){
+    store.set('1234', testJson, function(err, ok){
         assert.ok(!err, '#set() got an error');
         assert.ok(ok, '#set() is not ok');
 
@@ -25,19 +25,19 @@ store.on('connect', function(){
         testJson._rev=ok.rev;
 
         // #get()
-        store.get('123', function(err, data){
+        store.get('1234', function(err, data){
             console.log("RETRIEVED: " + data.name);
             assert.ok(!err, '#get() got an error');
             assert.deepEqual(testJson, data);
             // #set null
-            store.set('123', testJson, function(err){
+            store.set('1234', testJson, function(err){
                 if (err) {
                     debug("##AN ERROR OCCURRED SETTING SESSION: " + err);
                 }else{
                     debug("Updated session OK")
                 }
                 assert.ok(!err, "#set() got an err");
-                store.destroy('123', function(err){
+                store.destroy('1234', function(err){
                     if (err) {
                         debug("AN ERROR OCCURRED DESTROYING SESSION: " + err);
                     }
