@@ -9,8 +9,13 @@ var assert = require('assert')
     , debug = require("debug")("cloudant:test");
 
 //change the url
-var store = new CloudantStore({url: "https://@Username:@Password@Username-bluemix.cloudant.com",
+//var store = new CloudantStore({url: "https://@Username:@Password@Username-bluemix.cloudant.com",
+//  databaseName:"sessions"});
+
+var store = new CloudantStore({url: "https://6970644b-4d87-43e2-9c77-4aaf9692fd13-bluemix:eb106779abcd3083bcc6bc234ba6183aff37eecae6a207c9e867ac9bcb79c0a4@6970644b-4d87-43e2-9c77-4aaf9692fd13-bluemix.cloudant.com",
   databaseName:"sessions"});
+
+
 
 store.on('connect', function(){
     console.log("Connected to cloudant sessions ");
@@ -37,14 +42,18 @@ store.on('connect', function(){
                     debug("Updated session OK")
                 }
                 assert.ok(!err, "#set() got an err");
-                store.destroy('1234', function(err){
-                    if (err) {
-                        debug("AN ERROR OCCURRED DESTROYING SESSION: " + err);
-                    }
-                    assert.ok(!err, "#destroy() got an err");
-                    debug('### done');
-                    process.exit(0);
-                });
+                store.touch('1234',testJson, function(err,touchData){
+                     assert.ok(!err,"#touch() got an err");
+                    store.destroy('1234', function(err){
+                        if (err) {
+                            debug("AN ERROR OCCURRED DESTROYING SESSION: " + err);
+                        }
+                        assert.ok(!err, "#destroy() got an err");
+                        debug('### done');
+                        process.exit(0);
+                    });
+                })
+
             });
 
         });
