@@ -9,12 +9,8 @@ var assert = require('assert')
     , debug = require("debug")("cloudant:test");
 
 //change the url
-//var store = new CloudantStore({url: "https://@Username:@Password@Username-bluemix.cloudant.com",
-//  databaseName:"sessions"});
-
-var store = new CloudantStore({url: "https://6970644b-4d87-43e2-9c77-4aaf9692fd13-bluemix:eb106779abcd3083bcc6bc234ba6183aff37eecae6a207c9e867ac9bcb79c0a4@6970644b-4d87-43e2-9c77-4aaf9692fd13-bluemix.cloudant.com",
+var store = new CloudantStore({url: "https://@Username:@Password@Username-bluemix.cloudant.com",
   databaseName:"sessions"});
-
 
 
 store.on('connect', function(){
