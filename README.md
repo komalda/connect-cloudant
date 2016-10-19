@@ -1,12 +1,12 @@
-# Connect-Cloudant
+# Connect-CloudantDb
 =======
 
 
 # NodeJS Session Store for Cloudant backed applications.
 
-`npm install connect-cloudant`
+`npm install connect-cloudantdb`
 
-This is based on `connect-couchbase`, found at https://github.com/christophermina/connect-couchbase.
+This is based on `connect-couchbase`, found at https://github.com/christophermina/connect-couchbase. This project is a fork of connect-cloudant with bugs fixed. The maintainer of the original connect-cloudant project could not be reached in order to accept the pull-requests.
 
 You can use like below, when setting up your Express 4.x app:
 -----
@@ -41,4 +41,4 @@ app.use(session({
 }));
 
 ```
-Please file any bugs at https://github.com/komalda/connect-cloudant/issues
+Please file any bugs at https://github.com/stanix/connect-cloudant/issues
