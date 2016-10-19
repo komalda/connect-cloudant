@@ -13,7 +13,7 @@ You can use like below, when setting up your Express 4.x app:
 
 ```
 var session = require('express-session');
-var CloudantStore = require('connect-cloudant')(session);
+var CloudantStore = require('connect-cloudantdb')(session);
 var cloudantStore = new CloudantStore({
      url: cloudant database url [ https://@UserName:@Password@UserName.cloudant.com ] //required
      databaseName: 'sessions' (default sessions)  //optional
