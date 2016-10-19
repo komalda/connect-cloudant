@@ -1,12 +1,12 @@
 {
-  "name": "connect-cloudant",
-  "description": "Clodant session store for Connect",
-  "version": "1.0.6",
+  "name": "connect-cloudantdb",
+  "description": "Clodant session store for Connect forked from connect-cloudant",
+  "version": "0.0.2",
   "author": "Ixonos Plc.",
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git@github.com:komalda/connect-cloudant.git"
+    "url": "git@github.com:stanix/connect-cloudant.git"
   },
   "dependencies": {
     "cloudant": "^1.4.1",
@@ -16,13 +16,13 @@
     "util": "^0.10.3"
   },
   "devDependencies": {
-    "express-session": "^1.13.0"
+    "express-session": "^1.14.1"
   },
   "engines": {
     "node": "*"
   },
   "bugs": {
-    "url": "https://github.com/komalda/connect-cloudant/issues"
+    "url": "https://github.com/stanix/connect-cloudant/issues"
   },
   "scripts": {
     "test": "node cloudant-test.js"
